@@ -9,13 +9,13 @@ import { CoursesModule } from './courses/courses.module';
     CoursesModule,
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: '172.17.0.2',
-      port: 5432,
-      username: 'admin',
+      host: 'db',
+      port: 5433,
+      username: 'postgres',
       password: 'admin',
       database: 'devtraining',
       autoLoadEntities: true,
-      synchronize: true
+      synchronize: false
     })
   ],
   controllers: [AppController],
