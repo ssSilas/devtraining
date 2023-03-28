@@ -1,5 +1,6 @@
-#!/bun/bash
+#!/bin/bash
 
 npm i
 npm run build
-npm run dev
+npm run typeorm migration:run
+# npm run dev

@@ -10,7 +10,7 @@ import { CoursesModule } from './courses/courses.module';
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'db',
-      port: 5433,
+      port: 5432,
       username: 'postgres',
       password: 'admin',
       database: 'devtraining',
