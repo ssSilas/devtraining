@@ -3,4 +3,4 @@
 npm i
 npm run build
 npm run typeorm migration:run
-# npm run dev
+npm run dev

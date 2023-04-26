@@ -11,7 +11,7 @@ export class CoursesController {
   }
 
   @Get(':id')
-  findOne(@Param() id: number) {
+  findOne(@Param() id: string) {
     return this.coursesService.findOne(id)
   }
 
@@ -21,7 +21,7 @@ export class CoursesController {
   }
 
   @Post()
-  update(@Param() id: number, @Body() body) {
+  update(@Param() id: string, @Body() body) {
     return this.coursesService.update(id, body)
   }
 

@@ -8,13 +8,14 @@ import { CoursesModule } from './courses/courses.module';
   imports: [
     CoursesModule,
     TypeOrmModule.forRoot({
-      type: 'postgres',
+      type: 'postgres', 
       host: 'db',
-      port: 5432,
+      port: 5432, 
       username: 'postgres',
       password: 'admin',
       database: 'devtraining',
-      autoLoadEntities: true,
+      entities:[__dirname + '/**/*.entity.js'],
+      autoLoadEntities: false,
       synchronize: false
     })
   ],
