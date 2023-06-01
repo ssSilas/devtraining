@@ -1,17 +1,17 @@
 version: "3.0"
 
 services:
-  app:
-    build: .
-    entrypoint:
-      - .docker/entrypoint.sh
-    container_name: devtraining-docker
-    ports:
-      - "3000:3000"
-    volumes:
-      - .:/home/node/app
-    depends_on:
-      - db
+  # app:
+  #   build: .
+  #   entrypoint:
+  #     - .docker/entrypoint.sh
+  #   container_name: devtraining-docker
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - .:/home/node/app
+  #   depends_on:
+  #     - db
   db:
     build: .docker/postgres
     container_name: devtraining-db
