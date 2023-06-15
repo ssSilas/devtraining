@@ -1,17 +1,17 @@
 version: "3.0"
 
 services:
-  # app:
-  #   build: .
-  #   entrypoint:
-  #     - .docker/entrypoint.sh
-  #   container_name: devtraining-docker
-  #   ports:
-  #     - "3000:3000"
-  #   volumes:
-  #     - .:/home/node/app
-  #   depends_on:
-  #     - db
+  app:
+    build: .
+    entrypoint:
+      - .docker/entrypoint.sh
+    container_name: devtraining-docker
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/node/app
+    depends_on:
+      - db
   db:
     build: .docker/postgres
     container_name: devtraining-db
@@ -24,6 +24,18 @@ services:
     environment:
       - POSTGRES_PASSWORD=admin
       - POSTGRES_DB=devtraining
+  dbtest:
+    build: .docker/postgres
+    container_name: db-test
+    restart: always
+    tty: true
+    ports:
+      - "5433:5432"
+    volumes:
+      - .docker/dbdatatest:/var/lib/postgressql/data
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=test_db
   pgadmin:
     image: dpage/pgadmin4
     container_name: devtraining-admin
