@@ -1,6 +1,5 @@
 import { BeforeInsert, Column, CreateDateColumn, Entity, JoinTable, ManyToMany, PrimaryGeneratedColumn } from "typeorm"
 import { TagEntity } from "./tag.entity"
-
 import { v4 as uuidv4 } from 'uuid'
 @Entity({ name: 'courses' })
 export class CourseEntity {
