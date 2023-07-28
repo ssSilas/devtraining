@@ -10,5 +10,6 @@ async function bootstrap() {
     transform: true
   }))
   await app.listen(3000);
+  console.log("\n------------- RUNNING IN: 3000 -------------\n")
 }
 bootstrap();

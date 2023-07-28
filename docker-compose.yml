@@ -7,7 +7,7 @@ services:
       - .docker/entrypoint.sh
     container_name: devtraining-docker
     ports:
-      - "3000:3000"
+      - "3050:3050"
     volumes:
       - .:/home/node/app
     depends_on:
